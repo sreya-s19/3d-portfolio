@@ -1,7 +1,6 @@
 # 3D Interactive Cybersecurity Portfolio
 
-![Portfolio Screenshot](public/images/screenshot.png) 
-<!-- Make sure to add a good screenshot of your site named 'screenshot.png' in the public/images folder -->
+![Portfolio Screenshot](public/screenshot.png) 
 
 Welcome to the repository for my 3D interactive portfolio website. This project is a fusion of modern web technologies and 3D graphics, designed to create an immersive and engaging showcase of my skills, projects, and journey in the field of cybersecurity.
 
