@@ -1,0 +1,953 @@
+/* src/style.css (Restored to Original Working Version) */
+
+:root {
+  --background-color: #0A0F1A;
+  --primary-glow: #00FFFF; /* Cyan */
+  --text-color: #EAEAEA;
+  --secondary-color: #3B4B68;
+  --font-main: 'Roboto', sans-serif;
+  --font-heading: 'Orbitron', sans-serif;
+  --font-mono: 'Courier New', Courier, monospace;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+/* --- App Layout --- */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(10, 15, 26, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--secondary-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-link {
+  font-family: var(--font-heading);
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-glow);
+  text-shadow: 0 0 10px var(--primary-glow);
+}
+
+/* --- Homepage Layout --- */
+.home-canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
+}
+
+.intro-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; 
+  padding-left: 12%;      
+  max-width: 500px;       
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.intro-section h1 {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-glow);
+  text-shadow: 0 0 15px var(--primary-glow);
+}
+
+.intro-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Intro Section Grid Layout */
+.intro-section-grid {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  align-items: center;
+  gap: 2rem;
+  padding: 0 5%;
+}
+
+.intro-text-content {
+  text-align: left;
+}
+
+/* --- Add this to your style.css to fix the heading --- */
+
+.intro-text-content h1 {
+  font-family: var(--font-heading);
+  font-size: 3.5rem; /* Restores the large size */
+  margin-bottom: 1rem;
+  color: var(--primary-glow); /* Restores the cyan color */
+  text-shadow: 0 0 15px var(--primary-glow); /* Restores the glow effect */
+}
+
+.intro-text-content p {
+  font-size: 1.2rem; /* Restores the subtitle's size */
+  line-height: 1.6;
+  color: var(--text-color); /* Restores the light text color */
+}
+
+/* Ensure the button also has its specific styles if needed */
+.intro-text-content .explore-button {
+  margin-top: 2rem;
+}
+
+.explore-button {
+  font-family: var(--font-heading);
+  background-color: var(--primary-glow);
+  color: var(--background-color);
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.explore-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+}
+
+.achievements-section {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 6rem 2rem;
+  background-color: rgba(10, 15, 26, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.achievement-item h2 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--primary-glow);
+  margin: 0;
+}
+
+.achievement-item p {
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-top: 0.5rem;
+}
+
+/* --- NEW: Certifications Section Styling --- */
+.certifications-section {
+  padding: 6rem 0; /* Vertical padding */
+  background-color: var(--background-color);
+}
+
+.certifications-section .section-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--primary-glow);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.certifications-scroll-container {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto; /* This creates the horizontal scroll */
+  padding: 1rem 5%; /* Adds padding on the sides */
+  /* Hide the default scrollbar but keep it functional */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.certifications-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.certification-card {
+  flex: 0 0 320px; /* Each card has a fixed width and doesn't shrink */
+  background-color: #121A2A;
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.cert-image-container {
+  width: 100%;
+  height: 220px; /* A fixed height for consistency */
+  background-color: #fff; /* White background for the certificate image */
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cert-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Shows the whole certificate without stretching */
+}
+
+.cert-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 400;
+  min-height: 40px; /* Ensures consistent height even with long titles */
+}
+
+/* --- NEW: Research Section Styling --- */
+
+.research-section {
+  background-color: #121A2A; /* A slightly different dark shade for separation */
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.research-section .section-title {
+  color: var(--text-color);
+  text-shadow: none; /* A more subtle title for this section */
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.research-card {
+  background-color: #0A0F1A;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--secondary-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.research-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 255, 255, 0.2);
+}
+
+.research-card-image {
+  position: relative;
+  height: 200px;
+}
+
+.research-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.research-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(10, 15, 26, 0.9) 20%, transparent 60%);
+}
+
+.research-card-content {
+  padding: 1.5rem;
+}
+
+.research-card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.75rem;
+}
+
+.research-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--primary-glow);
+  margin: 0 0 0.5rem 0;
+}
+
+.research-card-description {
+  color: #aeb9c9;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Re-using styles from other pages for consistency */
+.research-section .page-section {
+  padding: 0; /* Reset padding if reusing this class */
+}
+
+/* --- Add this to style.css if you haven't already --- */
+
+.contact-section {
+  padding: 6rem 2rem;
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+.contact-section .section-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--primary-glow);
+  margin-bottom: 4rem;
+  text-shadow: 0 0 10px var(--primary-glow);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-item {
+  background-color: #121A2A;
+  border: 1px solid var(--secondary-color);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.contact-item h4 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin: 0 0 0.5rem 0;
+}
+
+.contact-item a {
+  font-family: var(--font-mono);
+  color: var(--primary-glow);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: text-decoration 0.3s ease;
+  word-break: break-all;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.blinking-cursor {
+  display: inline-block;
+  background-color: var(--primary-glow);
+  width: 10px;
+  height: 1.2rem;
+  margin-left: 8px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { background-color: transparent }
+  50% { background-color: var(--primary-glow) }
+}
+
+/* --- Projects Page Carousel Layout --- */
+.projects-page-carousel {
+  width: 100%;
+  height: calc(100vh - 80px);
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-page-carousel .page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+  padding: 4rem 2rem 2rem 2rem;
+  pointer-events: none;
+}
+
+.projects-page-carousel .page-header h1 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--primary-glow);
+  text-shadow: 0 0 10px var(--primary-glow);
+  margin: 0;
+}
+
+.projects-page-carousel .page-header p {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  background-color: rgba(10, 15, 26, 0.5);
+  border: 1px solid var(--secondary-color);
+  color: var(--text-color);
+  font-size: 2rem;
+  width: 50px;
+  height: 80px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.carousel-arrow:hover {
+  background-color: var(--primary-glow);
+  color: var(--background-color);
+  border-color: var(--primary-glow);
+}
+
+.carousel-arrow.left {
+  left: 2rem;
+  border-radius: 0 10px 10px 0;
+}
+
+.carousel-arrow.right {
+  right: 2rem;
+  border-radius: 10px 0 0 10px;
+}
+
+.click-target {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 250px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+/* --- Project Detail Modal --- */
+.project-detail-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 15, 26, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-detail-content {
+  background: #121A2A;
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  height: 80vh;
+  padding: 2rem;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.readme-content {
+  font-family: var(--font-main);
+  color: var(--text-color);
+}
+
+.readme-content h1 {
+  font-family: var(--font-heading);
+  color: var(--primary-glow);
+  border-bottom: 2px solid var(--primary-glow);
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.readme-content h2 {
+  font-family: var(--font-heading);
+  color: var(--text-color);
+  border-bottom: 1px solid var(--secondary-color);
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+}
+
+.readme-content p {
+  line-height: 1.7;
+}
+
+.readme-content li {
+  line-height: 1.7;
+  margin-left: 1rem;
+}
+
+/* --- NEW: General Page Section Styling --- */
+.projects-page-container {
+  background-color: var(--background-color); /* Ensures a solid background when scrolling */
+}
+
+.page-section {
+  padding: 6rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--primary-glow);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 4rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- NEW: Roadmap Section Styling --- */
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  text-align: left;
+}
+
+.roadmap-phase {
+  background-color: #121A2A;
+  border: 1px solid var(--secondary-color);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.roadmap-phase h3 {
+  font-family: var(--font-mono);
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.roadmap-phase h4 {
+  font-family: var(--font-heading);
+  color: var(--text-color);
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.roadmap-phase ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.roadmap-phase li {
+  margin-bottom: 0.8rem;
+  color: #aeb9c9;
+}
+
+/* --- NEW: Skills Section Styling --- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  text-align: left;
+}
+
+.skill-card {
+  background-color: #121A2A;
+  border: 1px solid var(--secondary-color);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.skill-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--primary-glow);
+  margin: 0 0 0.5rem 0;
+}
+
+.skill-card p {
+  color: #aeb9c9;
+  line-height: 1.6;
+}
+
+
+/* --- NEW: About Page Styling (Dark Theme) --- */
+.about-page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  /* THE FIX: Use your existing dark background and text colors */
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.about-header h1 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  /* THE FIX: Use your theme's glow color for the main heading */
+  color: var(--primary-glow);
+  text-shadow: 0 0 10px var(--primary-glow);
+}
+
+.about-header p {
+  font-size: 1.1rem;
+  /* THE FIX: Use a subtle secondary color for subtitles */
+  color: var(--secondary-color);
+}
+
+/* --- Profile Section --- */
+.profile-section {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 5rem;
+  background-color: #121A2A; /* A slightly lighter dark shade for contrast */
+  padding: 3rem;
+  border-radius: 12px;
+  border: 1px solid var(--secondary-color);
+}
+
+.profile-image {
+  flex-shrink: 0;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--primary-glow);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-bio .role-title {
+  font-family: var(--font-heading);
+  color: var(--secondary-color);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-bio h2 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin: 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.profile-bio .bio-text {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #aeb9c9; /* A softer white for body text */
+}
+
+.contact-details {
+  margin-top: 2rem;
+  color: var(--secondary-color);
+}
+.contact-details p {
+  margin: 0.5rem 0;
+}
+
+/* --- Details Grid --- */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  border-top: 1px solid var(--secondary-color);
+  padding-top: 4rem;
+}
+
+.detail-item {
+  line-height: 1.8;
+  background-color: #121A2A;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--secondary-color);
+  text-align: left;
+}
+
+.detail-item h3 {
+  font-family: var(--font-heading);
+  color: #aeb9c9;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
+
+.detail-item p {
+  margin: 0.2rem 0;
+  color: #aeb9c9;
+}
+.detail-item p strong {
+    color: var(--text-color);
+}
+
+.connect-item a {
+  display: block;
+  color: var(--primary-glow);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  word-break: break-all; /* Prevents long links from overflowing */
+}
+
+.connect-item a:hover {
+  text-decoration: underline;
+}
+
+/* --- Add this to the "About Page Styling" section of your style.css --- */
+
+.bio-full-text {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #aeb9c9; /* Softer white for easy reading */
+}
+
+.bio-full-text p {
+    margin-bottom: 1.2em; /* Adds a nice space between paragraphs */
+}
+
+.bio-full-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Contact Page Styling (Dark Theme) --- */
+.contact-page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  /* THE FIX: Use your existing dark background and text colors */
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Connect Section Styling */
+.connect-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 6rem;
+  flex-wrap: wrap;
+}
+
+.connect-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.connect-text h2 {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  /* THE FIX: Use glow color for the heading */
+  color: var(--primary-glow);
+  text-shadow: 0 0 10px var(--primary-glow);
+}
+
+.connect-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #aeb9c9; /* Softer white for body text */
+  max-width: 500px;
+}
+
+.connect-card {
+  position: relative;
+  background-color: #121A2A; /* Lighter dark shade for the card */
+  border-radius: 24px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 380px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid var(--secondary-color);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.connect-card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* A subtle blue/cyan gradient for the background */
+  background: linear-gradient(45deg, var(--secondary-color), var(--primary-glow));
+  animation: gradient-animation 10s ease infinite;
+  background-size: 400% 400%;
+  opacity: 0.1; /* Make it very subtle */
+  filter: blur(15px);
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.connect-card-icon {
+  font-size: 3rem;
+  background-color: #0A0F1A; /* Match the main dark bg */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  z-index: 2;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--secondary-color);
+}
+
+.connect-card-button {
+  background-color: var(--primary-glow);
+  color: var(--background-color);
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: bold;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.connect-card-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+/* Footer Styling */
+.contact-footer {
+  border-top: 1px solid var(--secondary-color);
+  padding-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  text-align: left;
+}
+
+.footer-item h3 {
+  font-family: var(--font-heading);
+  color: var(--secondary-color);
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-item p, .footer-item a {
+  color: #aeb9c9;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-item a:hover {
+  color: var(--primary-glow);
+  text-decoration: underline;
+}
+
+/* --- NEW: Image Slideshow Styling --- */
+
+.intro-image-slideshow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideshow-card {
+  width: 100%;
+  max-width: 500px; /* Controls the max size of the card */
+  aspect-ratio: 16 / 9; /* Ensures a consistent shape */
+  background-color: #121A2A;
+  border: 1px solid var(--secondary-color);
+  border-radius: 16px; /* Rounded corners */
+  padding: 1rem;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+  overflow: hidden; /* Keeps the image inside the rounded corners */
+  position: relative; /* Needed for AnimatePresence */
+}
+
+.slideshow-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Covers the area without stretching */
+}

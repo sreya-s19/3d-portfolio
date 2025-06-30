@@ -1,0 +1,24 @@
+/* src/components/Achievements.css */
+.achievements-section {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: rgba(10, 15, 26, 0.5); /* Semi-transparent dark bg */
+  position: relative;
+  z-index: 5;
+}
+
+.achievement-item h2 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--primary-glow);
+  margin: 0;
+}
+
+.achievement-item p {
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-top: 0.5rem;
+}
