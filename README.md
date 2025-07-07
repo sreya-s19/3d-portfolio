@@ -4,7 +4,7 @@
 
 Welcome to the repository for my 3D interactive portfolio website. This project is a fusion of modern web technologies and 3D graphics, designed to create an immersive and engaging showcase of my skills, projects, and journey in the field of cybersecurity.
 
-**Live Site:** [**[Your Name]'s Portfolio**](https://[Your Live Site URL].netlify.app/)
+https://cyberdiaries.netlify.app/
 
 ---
 
