@@ -48,6 +48,7 @@ function ImageSlideshow() {
 
 function CertificationsSection() {
   const certifications = [
+    { title: 'Introduction to Dark Web, Anonymity, and Cryptocurrency', imageSrc: '/images/cert0.png' },
     { title: 'Cybersecurity Professional Certificate', imageSrc: '/images/cert1.png' },
     { title: 'Security Analyst Fundamentals', imageSrc: '/images/cert2.png' },
     { title: 'Computer Forensics', imageSrc: '/images/cert3.png' },

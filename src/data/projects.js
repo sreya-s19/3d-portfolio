@@ -16,7 +16,8 @@ export const projects = [
 
 ## Overview
 Dark-I is a conceptual tool designed for OSINT (Open-Source Intelligence) gathering. The project is currently in the planning phase, aimed at providing a comprehensive toolkit for cybersecurity researchers.
-
+## Status
+- Planned
 ## Tech Stack
 - Python
 - Argparse for command-line arguments
@@ -358,6 +359,133 @@ An interactive map of India that visualizes cyber crime statistics across differ
 - Clickable regions that display detailed statistics and charts.
 `
   },
+  {
+    id: 15,
+    title: 'S3CURE',
+    category: 'Game', 
+    description: 'A gamified web platform for learning cybersecurity.',
+    image: '/images/s3cure.png', 
+    readme: `
+# S3CURE
+**Category:** Gamified Learning Platform
+
+## Overview
+S3CURE is a fully gamified web platform designed to immerse users in the role of cybercrime investigators. Operating under the fictional agency "Cyber Diaries," users tackle complex cybercrime missions, solve interactive, multi-layered challenges, and earn digital badges that reflect their expertise. This project focuses on realistic, skill-based learning over simple memorization, creating an engaging educational experience for aspiring cybersecurity professionals.
+
+## Tech Stack
+This project is a full-stack monorepo application built with a modern, scalable architecture.
+
+### Frontend
+- **Framework:** React (with Vite)
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **State Management:** React Context API
+- **Routing:** React Router
+
+### Backend & Database
+- **Backend Logic:** Firebase Functions (Node.js)
+- **Database:** Cloud Firestore
+- **Authentication:** Firebase Authentication
+- **Hosting:** Firebase Hosting
+
+### Development Environment
+- **Local Simulation:** Firebase Emulator Suite
+- **Version Control:** Git & GitHub
+- **Node Version Management:** NVM
+    `
+  },
+  {
+    id: 16,
+    title: 'CryptoCrack',
+    category: 'Game', 
+    description: 'A gamified, interactive cryptography learning platform.',
+    image: '/images/cryptocrack.png', 
+    readme: `
+# CryptoCrack – Crack the Code, Capture the Flag
+**Category:** Gamified CTF Platform
+
+## Overview
+CryptoCrack is a gamified, interactive cryptography learning platform designed to help users understand and practice cryptographic techniques through CTF-style challenges. With a retro hacker aesthetic, users solve progressively difficult puzzles using real-world ciphers and encoding techniques to capture flags, earn XP, and unlock new levels. Unlike traditional platforms, CryptoCrack emphasizes visual interaction, real-time feedback, and handcrafted cryptographic gameplay.
+## Status
+- In progress
+## Tech Stack
+
+### Frontend
+CryptoCrack is built entirely with **vanilla HTML, CSS, and JavaScript** to create a lightweight, fast, and fully customizable interactive experience.
+- **No CSS frameworks** (like Tailwind or Bootstrap) are used — all styling is handcrafted to achieve a retro hacker/glitch-style look.
+- **JavaScript** handles all game logic, user interaction, flag validation, and level progression.
+- **Optional Animation Libraries:** GSAP or Anime.js could be used for smooth visual transitions, such as vault openings or typewriter effects.
+
+### Backend (Conceptual)
+If user accounts, dynamic challenges, or persistent XP tracking were added, the backend could be:
+- **Runtime:** Node.js with Express.js to manage API endpoints and challenge logic.
+- **Database:** MongoDB (for flexibility) or PostgreSQL (for relational tracking of users and flags).
+    `
+  },
+  {
+    id: 17,
+    title: 'CLUECRYPT',
+    category: 'Game', 
+    description: 'An immersive 3D web-based forensic escape room.',
+    image: '/images/cluecrypt.png', 
+    readme: `
+# CLUECRYPT: 3D Forensic Escape Room
+**Category:** 3D Interactive Game
+
+## Overview
+CLUECRYPT is an immersive 3D web-based forensic escape room where players step into the role of a cybercrime investigator. Set inside a high-tech virtual office, players solve a fictional case involving sabotage, corporate espionage, or digital murder. The gameplay involves navigating through multiple rooms, inspecting virtual evidence (USBs, documents, devices), and solving digital forensic puzzles — such as steganography challenges, hex dump analysis, password cracking, and log file investigation. Each solved puzzle unlocks access to the next area or narrative clue.
+
+CLUECRYPT blends storytelling, interactive 3D exploration, and hands-on digital forensics to deliver an educational yet thrilling experience for cybersecurity students and enthusiasts.
+## Status
+- In progress
+## Tech Stack
+
+### Frontend
+- **Framework:** React.js (for the SPA structure and UI components).
+- **3D Engine:** React Three Fiber (Three.js) to create and render the 3D environments and interactive objects.
+- **Animation:** Framer Motion for smooth UI transitions and interactions.
+- **State Management:** Redux or Zustand for managing game state (clue progression, room unlocks, etc.).
+- **Styling:** Custom CSS or SCSS for styling UI elements like tool panels and dialogs.
+
+### Backend
+- **Runtime:** Node.js with Express or Python with Flask for serving puzzle content and tracking progress.
+- **Authentication:** JWT (JSON Web Tokens) to secure player sessions and allow save/resume functionality.
+- **Database:** MongoDB for storing user accounts, mission states, and puzzle completions.
+- **API:** REST API for interaction between frontend puzzles and backend validation.
+    `
+  },
+  {
+    id: 18,
+    title: 'BIOCYBER',
+    category: 'Web', 
+    description: 'A web-based simulation where digital forensics meets DNA.',
+    image: '/images/biocyber.png', 
+    readme: `
+# BIOCYBER: Digital Forensics Meets DNA
+**Category:** Forensic Simulation Platform
+
+## Overview
+BIOCYBER is a groundbreaking web-based simulation platform that explores the intersection of cyber forensics and bioinformatics. Users take on the role of forensic analysts investigating cases involving synthetic DNA sequence tampering, medical record forgery, or biohacking attempts. Through simulated forensic tasks, players decode manipulated DNA sequences using base64/hex steganography, verify the integrity of digital medical records, and compile findings into professional forensic reports.
+
+Designed for forensic science and cyberlaw students, BIOCYBER brings attention to a rare but increasingly important crossover: the convergence of biology and digital crime.
+## Status
+- In progress
+## Tech Stack
+
+### Frontend
+- **Framework:** React.js for building interactive components and case navigation.
+- **Data Visualization:** D3.js or Three.js for visualizing DNA strands and highlighting altered base pairs.
+- **Data Interface:** Ace Editor / Monaco Editor for an embedded code editor-style view of DNA/base64/hex data.
+- **Reporting Module:** React-Quill or Draft.js for building a forensic report writer with rich text formatting.
+
+### Backend
+- **Runtime:** Python with Flask, ideal for integrating bioinformatics libraries.
+- **Bioinformatics Library:** Biopython for DNA sequence parsing, mutation detection, and pattern searching.
+- **Report Generation:** PyPDF2 or ReportLab to generate downloadable forensic reports in PDF format.
+- **Database:** SQLite or PostgreSQL for storing case files, user submissions, and reports.
+    `
+  },
+
 ];
 
 // This array populates the filter buttons.
